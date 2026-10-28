@@ -3,35 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visualización de datos PEC 2. Convex Hull</title>
+    <title>Visualización de Datos - PEC 2: Convex Hull</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 2rem;
+            background-color: #f4f6f8;
+            color: #333;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-color: #f4f6f8;
-            color: #333;
+            min-height: 100vh;
         }
         .container {
-            text-align: center;
+            max-width: 1100px;
+            width: 100%;
             background: white;
-            padding: 2rem 3rem;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+        .header {
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #edf2f7;
+            padding-bottom: 1.5rem;
         }
         h1 {
-            margin: 0;
-            font-size: 1.8rem;
+            margin: 0 0 0.5rem 0;
+            font-size: 2rem;
             color: #1a202c;
+        }
+        h2 {
+            margin: 0 0 1rem 0;
+            font-size: 1.25rem;
+            color: #4a5568;
+            font-weight: normal;
+        }
+        .author-info {
+            color: #f97316;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        .description {
+            text-align: justify;
+            color: #4a5568;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            background: #f8fafc;
+            padding: 1.2rem 1.5rem;
+            border-left: 4px solid #f97316;
+            border-radius: 4px;
+        }
+        .image-container {
+            margin-top: 1.5rem;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+        .image-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .footer {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #a0aec0;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>Visualización de datos PEC 2. Convex Hull</h1>
+        <div class="header">
+            <h1>PEC 2: Estudio de técnicas de visualización de datos</h1>
+            <h2>Visualización espacial del aumento de temperaturas extremas en Andalucía mediante <i>Convex Hull</i></h2>
+            <div class="author-info">
+                Diego Manuel Sánchez Huelva — Alumno de la asignatura Visualización de Datos del Máster Universitario de Ciencia de Datos de la UOC
+            </div>
+        </div>
+
+        <div class="description">
+            <p><strong>Descripción de la técnica:</strong> Esta representación utiliza envolventes convexas (<i>Convex Hull</i>) para comparar la expansión espacial del calor extremo en Andalucía entre dos bloques temporales (2000–2010 vs. 2011–2025). Muestra el perímetro geométrico que delimita las estaciones meteorológicas que han registrado más de 10 días al año superando los 40 °C, evidenciando el avance del impacto térmico hacia nuevas zonas del territorio.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="convex_hull_comparativa_aumento_temperatura.png" alt="Mapa comparativo mediante Convex Hull del aumento de temperaturas extremas en Andalucía">
+        </div>
+
+        <div class="footer">
+            Universitat Oberta de Catalunya (UOC) — Máster Universitario en Ciencia de Datos
+        </div>
     </div>
+
 </body>
 </html>
